@@ -1,0 +1,29 @@
+@charset "utf-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #333;
+  font-size: 1.6rem;
+  .container {
+    width: calc(100% - 200px);
+    margin-left: auto;
+  }
+  nav {
+    color: #fff;
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    background-color: rgb(41, 41, 41);
+  }
+}
