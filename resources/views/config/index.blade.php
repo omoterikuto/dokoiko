@@ -1,9 +1,9 @@
 @extends('app')
 
-@section('title', '管理画面')
+@section('title', '設定')
 
 @section('content')
   <div class="container">
-    <h1>お知らせ</h1>
+    <h1>設定</h1>
   </div>
 @endsection

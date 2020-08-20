@@ -4,6 +4,6 @@
 
 @section('content')
   <div class="container">
-    <h1>どこいこ食堂</h1>
+    <h1>広告</h1>
   </div>
 @endsection
