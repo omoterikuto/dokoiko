@@ -11,6 +11,10 @@
       <label>名前</label>
       <input type="text" name="name" class="" value="{{ $menu->name ?? old('name') }}">
     </div>
+    <div class="">
+      <label>金額</label>
+      <input type="text" name="value" class="" value="{{ $menu->value ?? old('value') }}">
+    </div>
     <div>
       <label data-browse="ファイルを選択" class="">写真</label>
       <input type="file" class="" name="image">
