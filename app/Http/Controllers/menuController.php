@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Menu;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Requests\MenuRequest;
+use Illuminate\Http\Request;
+
 
 
 class menuController extends Controller
@@ -22,7 +23,7 @@ class menuController extends Controller
   {
     return view('menu.create');
   }
-  public function store(Request $request, Menu $menu)
+  public function store(MenuRequest $request, Menu $menu)
   {
     $menu->name = $request->name;
     $menu->value = $request->value;
@@ -42,7 +43,7 @@ class menuController extends Controller
       'menu' => $menu,
     ]);
   }
-  public function update(Request $request, Menu $menu)
+  public function update(MenuRequest $request, Menu $menu)
   {
     $menu->name = $request->name;
     $menu->value = $request->value;
@@ -57,7 +58,7 @@ class menuController extends Controller
     $menu->save();
     return redirect()->route('menu.index');
   }
-  public function destroy(Request $request, Menu $menu)
+  public function destroy(Menu $menu)
   {
     $menu->delete();
     return redirect()->route('menu.index');

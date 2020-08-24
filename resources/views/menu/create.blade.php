@@ -4,6 +4,7 @@
 
 @section('content')
 <div class="container">
+  @include('error')
   <h1>メニュー登録</h1>
   <form action="{{ route('menu.store')}}" method="post" enctype="multipart/form-data">
     @csrf
