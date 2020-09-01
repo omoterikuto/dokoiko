@@ -15,5 +15,8 @@
     <li class="nav__item">
       <a href="{{ route('news.index')}}">お知らせ</a>
     </li>
+    <li class="nav__item">
+      <a href="{{ route('config.index')}}">設定</a>
+    </li>
   </ul>
 </nav>

@@ -14,6 +14,7 @@
 
 <body>
   <div id="app">
+    @include('error')
     @yield('content')
     @include('nav')
   </div>

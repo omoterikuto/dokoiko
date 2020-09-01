@@ -8,7 +8,7 @@
     <a href="{{ route('menu.create')}}">メニューを登録</a>
     @foreach ($menus as $menu)
     <div>
-      <img src="/storage/{{$menu->image}}" alt="" width="200px" height="200px">
+      <img src="/storage/menu/{{$menu->image}}" alt="" width="200px" height="200px">
       <h3>{{ $menu->name }}</h3>
       <p>{{ $menu->value }} 円</p>
       <p>{{ $menu->text }}</p>

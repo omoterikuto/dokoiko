@@ -4,36 +4,34 @@
 
 @section('content')
   <div class="container">
-    <div class="row">
-          <div class="card">
-            <h2 class="h3 card-title text-center mt-2">ユーザー登録</h2>
-
-            @include('error_card_list')
-            
-            <div class="card-text">
+    <div class="">
+          <div class="">
+            <h2 class="">ユーザー登録</h2>
+            @include('error')
+            <div class="">
               <form method="POST" action="{{ route('register') }}">
                 @csrf
-                <div class="md-form">
+                <div class="">
                   <label for="name">ユーザー名</label>
-                  <input class="form-control" type="text" id="name" name="name" required value="{{ old('name') }}">
+                  <input class="" type="text" id="name" name="name" required value="{{ old('name') }}">
                   <small>英数字3〜16文字(登録後の変更はできません)</small>
                 </div>
-                <div class="md-form">
+                <div class="">
                   <label for="email">メールアドレス</label>
-                  <input class="form-control" type="text" id="email" name="email" required value="{{ old('email') }}" >
+                  <input class="" type="text" id="email" name="email" required value="{{ old('email') }}" >
                 </div>
-                <div class="md-form">
+                <div class="">
                   <label for="password">パスワード</label>
-                  <input class="form-control" type="password" id="password" name="password" required>
+                  <input class="" type="password" id="password" name="password" required>
                 </div>
-                <div class="md-form">
+                <div class="">
                   <label for="password_confirmation">パスワード(確認)</label>
                   <input class="form-control" type="password" id="password_confirmation" name="password_confirmation" required>
                 </div>
                 <button class="" type="submit">ユーザー登録</button>
               </form>
-              <div class="mt-0">
-                <a href="{{ route('login') }}" class="card-text">ログインはこちら</a>
+              <div class="">
+                <a href="{{ route('login') }}" class="">ログインはこちら</a>
               </div>
             </div>
       </div>

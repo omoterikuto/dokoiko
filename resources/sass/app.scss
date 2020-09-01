@@ -14,7 +14,8 @@ html {
 body {
   color: #333;
   font-size: 1.6rem;
-  .container {
+  .container,
+  .error {
     width: calc(100% - 200px);
     margin-left: auto;
   }

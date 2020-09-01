@@ -8,9 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\MenuRequest;
 use Illuminate\Http\Request;
 
-
-
-class menuController extends Controller
+class MenuController extends Controller
 {
   public function index()
   {
@@ -30,8 +28,8 @@ class menuController extends Controller
     $menu->text = $request->text;
     $menu->user_id = $request->user()->id;
     if (isset($request->image)) {
-      $filePath = $request->image->store('public');
-      $file_name = str_replace('public/', '', $filePath);
+      $filePath = $request->image->store('public/menu');
+      $file_name = str_replace('public/menu/', '', $filePath);
       $menu->image = $file_name;
     }
     $menu->save();
@@ -51,8 +49,8 @@ class menuController extends Controller
     $menu->user_id = $request->user()->id;
     if (isset($request->image)) {
       Storage::delete('public/' . $menu->image);
-      $filePath = $request->image->store('public');
-      $file_name = str_replace('public/', '', $filePath);
+      $file_path = $request->image->store('public/menu');
+      $file_name = str_replace('public/menu/', '', $file_path);
       $menu->image = $file_name;
     }
     $menu->save();
@@ -60,6 +58,7 @@ class menuController extends Controller
   }
   public function destroy(Menu $menu)
   {
+    Storage::delete('public/menu/' . $menu->image);
     $menu->delete();
     return redirect()->route('menu.index');
   }
